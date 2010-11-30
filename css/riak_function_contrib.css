@@ -1,0 +1,231 @@
+/* @override http://127.0.0.1:8000/css/riak_function_contrib.css */
+
+#content h1 {
+  font-size: 170% !important;
+  border-top: 4px solid #aaa !important;
+  padding-top: .5em !important;
+  margin-top: 1.5em !important;
+}
+
+#content h2 {
+  font-size: 150% !important;
+  margin-top: 1.5em !important;
+  border-top: 4px solid #e0e0e0 !important;
+  padding-top: .5em !important;
+}
+
+#content h3 {
+  margin-top: 1em !important;
+}
+
+body {
+    background: #525c61;
+    margin: 0;
+    padding: 0;
+    font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+
+
+div.fixwidth {
+    position: relative;
+    width: 900px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#head {
+    background: #f78c11 url("../images/orange-fade.png") repeat-x;
+    color: #ffffff;
+    height: 80px;
+    font-weight: bold;
+    z-index: 1;
+    overflow: visible;
+}
+
+#head img {
+    position: absolute;
+    top: 15px;
+    z-index: 100;
+    border: 0;
+}
+
+#nav {
+    position:absolute;
+    left: 110px;
+    bottom: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+#nav div.menu {
+    float: left;
+    padding: 0 25px 2px 0;
+}
+
+#nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#nav div.rest {
+    visibility: hidden;
+    position: absolute;
+    z-index: 100;
+    font-size: smaller;
+    background: #ffffff;
+    border: 1px solid #f78c11;
+    display: block;
+}
+
+#nav div.rest a {
+    color: #525c61;
+    font-weight: normal;
+    display: block;
+    padding: 2px 5px;
+}
+#nav div.rest a:hover {
+    background: #525c61;
+    color: #ffffff;
+}
+
+
+
+#body {
+    background: #ffffff;
+    padding-top: 58px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+#content {
+	float: left;
+    position: relative;
+    width: 675px;
+    font-size: 10pt;
+}
+
+#content ul li {
+  padding-l;;
+}
+
+#sidebar {
+	position: relative;
+    float: right;
+    top:  10px;
+    left: 15px;
+    width: 225px;
+    text-align: right;
+}
+
+#sidebar div.blurb {
+    margin-bottom: 1.5em;
+}
+
+#sidebar h3 {
+    color: #525c61;
+    padding: 0;
+    margin: 0;
+    font-size: 80%;
+}
+
+a {
+  color:  #f78c11;
+  text-decoration: none;
+}
+
+#sidebar p {
+    font-size: smaller;
+    margin: 0.5em 0 0 0;
+    line-height: 1.5em;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar li {
+    font-size: smaller;
+    padding: 2px 0;
+}
+
+label {
+    color: #525c61;
+}
+input, textarea {
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+#sidebar textarea {
+	width: 100%;
+}
+
+#sidebar input {
+    margin-bottom: 5px;
+    width: 90%;
+    align: right;
+}
+input.FormSubmitButton, #sidebar input.FormSubmitButton {
+    width: 8em;
+}
+span.required {
+    color: #f78c11;
+}
+
+div.clear {
+    clear: both;
+    height: 1px;
+}
+
+
+
+#footer {
+    color: #ffffff;
+    padding-top: 5px;
+    position: relative;
+    background-image: url(../images/grey-fade.png);
+    background-repeat: repeat-x;
+}
+
+#footer table {
+    margin-left:105px;
+	width:90%;
+}
+
+#footer td {
+    vertical-align: top;
+    width: 30%;
+}
+
+#footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#footer li {
+    font-size: smaller;
+    padding-top: 5px;
+}
+#footer li.maphead {
+    font-weight: bold;
+    padding-top: 10px;
+}
+#footer #address {
+    font-size: smaller;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+	margin-left:60px;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+#footer a:hover {
+    text-decoration: underline;
+}
+

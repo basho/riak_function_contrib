@@ -1,0 +1,28 @@
++Contributed By:+ Joe ...
+
+[[Source File on GitHub|]] 
+
+h3. Overview 
+
+This function can be used in a pre-commit hook to validate that the input is a valid JSON document.
+
+```js
+function validateJSON(object){
+
+  // A delete is a type of put in Riak so check and see what this
+  // operation is doing and pass over objects being deleted
+  if (obj.values[0]['metadata']['X-Riak-Deleted']){
+    return obj;
+  }
+
+  try {
+    Riak.mapValuesJson(object);
+    return object;
+  } catch(e) {
+    return {"fail":"Object is not JSON"};
+  }
+}
+```
+
+h3. Tips and tricks for using this functions
+

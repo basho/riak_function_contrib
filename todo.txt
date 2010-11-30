@@ -1,0 +1,17 @@
+# Copy 
+
+Proofread all copy for clarity and grammar/spelling
+
+# Styling
+
+Pretty up the front page?
+
+# Nav - 
+
+- Look into adding breadcrumb navigation
+- Fix home link layout 
+
+# Functions 
+	
+Get five functions for each of the categories before we launch this puppy
+	

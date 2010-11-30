@@ -1,0 +1,28 @@
+[[Source File on GitHub|]] 
+
+h3. Overview 
+
+This Erlang reduce function will delete bucket and key pairs passed to it from a map phase.
+
+```erlang
+-module(reduce_functions).
+
+-export([delete/2]).
+
+%Data is a list of bucket and key pairs
+delete(Data, _None) ->
+    {ok, C} = riak:local_client(),
+    F = fun(BucketKey, Acc) ->
+                case BucketKey of
+                    [Bucket, Key] ->
+                        C:delete(Bucket, Key, 0),
+                        Acc + 1;
+                    _ ->
+                        Acc
+                end end,
+    lists:foldl(F, 0, Data),
+    [length(Data)].
+```
+
+h3. Tips and tricks for using this functions
+

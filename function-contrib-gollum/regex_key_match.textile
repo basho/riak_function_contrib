@@ -1,0 +1,22 @@
++Contributed By:+ Joe ...
+
+[[Source File on GitHub|]] 
+
+h3. Overview 
+
+As you can see, this is a simple function written in JavaScript. Its original use was to return keys that match a given regex.
+
+This is the entirety of the function:
+
+```js
+function keyMatch(value, arg){ 
+  if (value.values[0].data.match(arg)){ 
+    return [value.key] 
+  }else{
+    return []
+  }
+}
+```
+
+h3. Tips and tricks for using this functions
+

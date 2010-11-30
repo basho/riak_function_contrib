@@ -1,0 +1,14 @@
+[[Source File on GitHub|]] 
+
+h3. Overview 
+
+This function counts records in a given bucket with map reduce. There are two phases to the map reduce, the below function provides the map phase and should be combined with the Riak.reduceSum to provide the number of keys in the bucket.
+
+```js
+function mapCount() {
+  return [1]
+}
+```
+
+h3. Tips and tricks for using this functions
+
