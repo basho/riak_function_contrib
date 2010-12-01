@@ -35,5 +35,4 @@ save_reduce(Values, Arg) ->
     end.
 ```
 
-h3. Tips and tricks for using this functions
 

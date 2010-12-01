@@ -18,5 +18,5 @@ function keyMatch(value, arg){
 }
 ```
 
-h3. Tips and tricks for using this functions
+
 
