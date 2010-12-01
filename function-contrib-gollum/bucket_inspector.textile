@@ -1,6 +1,6 @@
-[[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/other/erlang/bucket_importer.erl]] 
-
 h1. Forcing Read Repair on a Bucket 
+
+[[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/other/erlang/bucket_importer.erl]] 
 
 This Erlang function will read every key in a bucket and force read-repair on that bucket.
 

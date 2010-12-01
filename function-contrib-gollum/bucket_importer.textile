@@ -1,8 +1,8 @@
-[[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/other/erlang/bucket_importer.erl]] 
-
 h1. Importing a Directory of Files 
 
-This Erlang function allows you to import the contents of a directory into a bucket, you will need to specify the content type of the data to be imported as well. The function expects files to be named &lt;key&gt;.&lt;extension&gt;. This function is made to work with the [[Bucket Exporter|bucket_exporter]] available on this site as well.
+[[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/other/erlang/bucket_importer.erl]] 
+
+This Erlang function allows you to import the contents of a directory (recursively) into a bucket, you will need to specify the content type of the data to be imported as well. The function expects files to be named &lt;key&gt;.&lt;extension&gt;. This function is made to work with the [[Bucket Exporter|bucket_exporter]] available on this site as well.
 
 The function takes the 4 arguments:
 bucket_importer:import_data(riak node, bucket, directory, content-type)

@@ -1,7 +1,7 @@
+h1. Map Phases to return Bucket and Key Pairs
+
 [[Erlang Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/mapreduce/erlang/get_keys.erl]] 
 [[Erlang Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/mapreduce/js/get_keys.js]] 
-
-h1. Map Phases to return Bucket and Key Pairs 
 
 These functions return bucket and key pairs for use in subsequent map or reduce jobs. Either of these functions can be used in conjunction with the reduce function in [[delete_keys.erl|delete_keys]] to delete keys returned by these functions.
 

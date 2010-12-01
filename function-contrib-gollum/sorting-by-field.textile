@@ -1,9 +1,9 @@
+h1. Reduce Phase to Sort by Field
+
 +Contributed By:+ Francisco Treacy
 
 [[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/mapreduce/js/sorting-by-field.js]] 
-
-h1. Reduce Phase to Sort by Field 
-
+ 
 This a JavaScript MapReduce function that is actually written in [[CoffeeScript|http://jashkenas.github.com/coffee-script/]]. Its original use was to sort by field on objects stored in Riak. 
 
 
