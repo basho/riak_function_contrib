@@ -50,7 +50,7 @@ b[field])) {
 
 h3. Tips and tricks for using this functions
 
-Here is how it's actually used with riak-js, the [[Node.js client of for Riak, "riak-js"|riakjs.org]]:
+Here is how it's actually used with [[riak-js|riakjs.org]], Riak's Node.js client.
 ```js
 @db
  .add('airlines')

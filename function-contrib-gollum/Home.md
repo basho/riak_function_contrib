@@ -28,7 +28,7 @@ With that in mind, the goal of Riak Function Contrib is three-fold:
 
 You can use this page to: 
 		 
-* Search for [[MapReduce|map-reduce-functions]], [[Pre-/Post-Commit|pre-and-post-commit]] or [[other functions|other-functions]] that may be suitable for your needs 
+* Search for [[MapReduce|map-reduce-functions]], [[Pre-/Post-Commit|pre-and-post-commits]] or [[other functions|other-functions]] that may be suitable for your needs 
 * Learn how to contribute a function to the repo (see below)
 * If you're looking for the Function Contrib Repo on Github, [go here](https://github.com/basho/riak_function_contrib).
 
