@@ -1,22 +1,3 @@
-/* @override http://127.0.0.1:8000/css/riak_function_contrib.css */
-
-#content h1 {
-  font-size: 170% !important;
-  border-top: 4px solid #aaa !important;
-  padding-top: .5em !important;
-  margin-top: 1.5em !important;
-}
-
-#content h2 {
-  font-size: 150% !important;
-  margin-top: 1.5em !important;
-  border-top: 4px solid #e0e0e0 !important;
-  padding-top: .5em !important;
-}
-
-#content h3 {
-  margin-top: 1em !important;
-}
 
 body {
     background: #525c61;
@@ -103,6 +84,22 @@ div.fixwidth {
     position: relative;
     width: 675px;
     font-size: 10pt;
+}
+
+#content h1 {
+  font-size: 140% !important;
+  padding-top: .5em !important;
+  margin-top: 1.5em !important;
+}
+
+#content h2 {
+  font-size: 100% !important;
+  margin-top: 1.5em !important;
+  padding-top: .5em !important;
+}
+
+#content h3 {
+  margin-top: 1em !important;
 }
 
 #content ul li {

@@ -1,6 +1,6 @@
 [[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/hooks/pre-commit/js/validate_json.js]] 
 
-h3. Validate JSON Pre-Commit Hook 
+h1. Validate JSON Pre-Commit Hook 
 
 This function can be used in a pre-commit hook to validate that the input is a valid JSON document.
 
