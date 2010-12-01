@@ -9,6 +9,7 @@ Have a MapReduce Function to contribute? Check out he [[the contribution guideli
 h2. Map Reduce Functions
 
 [[Counting Keys in a Bucket (JS)|count_keys]]
+[[Return Bucket/Key Pairs (Erlang/JS)|get_keys]]
 [[Delete Key Reduce Phase (Erlang)|delete_keys]]
 [[Regex Key Match (JS)|regex_key_match]]
 [[Save the Result of a Map to a Riak Bucket/Key (Erlang)|save_reduce]]
