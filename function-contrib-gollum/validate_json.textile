@@ -1,5 +1,3 @@
-+Contributed By:+ Joe ...
-
 [[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/hooks/pre-commit/js/validate_json.js]] 
 
 h3. Overview 
