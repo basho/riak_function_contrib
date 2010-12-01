@@ -4,7 +4,7 @@ This is a list of other functions, such as utilities, that can be used from a Ri
 
 The file names _should_ reflect the nature of the function, so look to that for an idea of how it might help you and what you can use it for.
 
-Have a Function or script you would like to contribute? Check out he [[the contribution guidelines|#]] to get started.
+Have a Function or script you would like to contribute? Check out the [[the contribution guidelines|#]] and send it our way. We would love to have it.
 
 h2. Other Functions or Scripts
 
