@@ -2,9 +2,9 @@
 
 h3. Overview 
 
-This Erlang function will copy the full or partial contents of a bucket from one Riak cluster to another or from one bucket to another bucket.
+This Erlang function can be used to copy all or some contents of a bucket from one Riak cluster to another. It can also be used to copy one bucket to another bucket within the same cluster.
 
-The function takes the 4 or 5 arguments depending on if you want to export the entire bucket or just a percentage of the keys:
+The function takes the four or five arguments depending on if you want to export the entire bucket or just a percentage of the keys:
 bucket_reloader:reload(source Riak node, destination Riak node, source bucket, destination bucket, percent of key space).
 
 ```erlang
