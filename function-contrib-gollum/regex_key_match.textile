@@ -1,6 +1,6 @@
 +Contributed By:+ Joe ...
 
-[[Source File on GitHub|]] 
+[[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/mapreduce/js/regex_key_match.js]] 
 
 h3. Overview 
 

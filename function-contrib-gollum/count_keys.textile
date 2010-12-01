@@ -10,5 +10,4 @@ function mapCount() {
 }
 ```
 
-h3. Tips and tricks for using this functions
 

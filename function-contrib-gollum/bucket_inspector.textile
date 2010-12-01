@@ -1,4 +1,4 @@
-[[Source File on GitHub|]] 
+[[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/other/erlang/bucket_importer.erl]] 
 
 h3. Overview 
 

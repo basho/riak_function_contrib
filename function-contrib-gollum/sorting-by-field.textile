@@ -1,6 +1,6 @@
 +Contributed By:+ Francisco Treacy
 
-[[Source File on GitHub|]] 
+[[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/mapreduce/js/sorting-by-field.js]] 
 
 h3. Overview 
 
