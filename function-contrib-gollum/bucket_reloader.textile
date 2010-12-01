@@ -1,6 +1,6 @@
 [[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/other/erlang/bucket_reloader.erl]] 
 
-h3. Overview 
+h3. Copying a Bucket 
 
 This Erlang function can be used to copy all or some contents of a bucket from one Riak cluster to another. It can also be used to copy one bucket to another bucket within the same cluster.
 

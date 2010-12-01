@@ -1,8 +1,8 @@
 [[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/mapreduce/erlang/delete_key.erl]] 
 
-h3. Overview 
+h3. Reduce Phase to Delete Bucket/Key Pairs 
 
-This Erlang reduce function will delete bucket and key pairs passed to it from a map phase.
+This Erlang reduce function will delete bucket and key pairs passed to it from a map phase. The result of the function is the number of keys deleted during the reduce phase.
 
 ```erlang
 -module(reduce_functions).

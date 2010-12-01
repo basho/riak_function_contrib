@@ -2,7 +2,7 @@
 
 [[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/mapreduce/js/regex_key_match.js]] 
 
-h3. Overview 
+h3. Matching Records in a Map Phase with a Regex 
 
 As you can see, this is a simple function written in JavaScript. Its original use was to return keys that match a given regex.
 

@@ -1,4 +1,4 @@
-h1. MapReduce Functions
+h1. Map Reduce Functions
 
 This is a list of all the MapReduce Functions that have been contributed to the repo. These links will take you to author-provided information about the functions along with a link to a the source file in the [[Riak Function Contrib Repo|https://github.com/basho/riak_function_contrib]]. 
 
@@ -6,7 +6,7 @@ The file names _should_ reflect the nature of the function, so look to that for 
 
 Have a MapReduce Function to contribute? Check out he [[the contribution guidelines on the README to get start|https://github.com/basho/riak_function_contrib]] to get started.
 
-h2. MapReduce Functions
+h2. Map Reduce Functions
 
 [[Counting Keys in a Bucket (JS)|count_keys]]
 [[Delete Key Reduce Phase (Erlang)|delete_keys]]

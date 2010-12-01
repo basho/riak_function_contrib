@@ -1,6 +1,6 @@
 [[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/other/erlang/bucket_exporter.erl]] 
 
-h3. Overview 
+h3. Exporting Data to a Directory 
 
 This Erlang function allows you to export the contents of a bucket to a directory on the the filesystem, you can export the entire contents of a bucket or a percentage of the key space. The export will be placed in several directories and the filenames will be the key of record and the extension you specify. This function is made to work with the [[Bucket Importer|bucket_importer]] available on this site as well.
 
