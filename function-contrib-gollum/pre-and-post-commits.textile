@@ -8,5 +8,5 @@ Have a MapReduce Function to contribute? Check out he [[the contribution guideli
 
 h2. Pre- and Post-Commit Functions
 
-[[Function Two (Pre)|#]]
-[[Function One (Post)|#]]
+[[Validate JSON (Pre)|validate_json_]]
+

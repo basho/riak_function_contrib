@@ -24,5 +24,4 @@ function validateJSON(object){
 }
 ```
 
-h3. Tips and tricks for using this functions
 
