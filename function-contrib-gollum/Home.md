@@ -2,10 +2,10 @@ Riak Function Contrib is a joint effort between Basho, the company behind Riak, 
 
 # Where to start with Riak Function Contrib
 
-* If you're looking for an overview of the project, keep reading. 
+* If you're looking for an overview of the project, keep reading
 * Scroll down to the **Contributing** section to learn how to add a function to the repo
 * The list of available MapReduce functions can be found [[here|map-reduce-functions]]
-* The Pre- and Post- Commit Functions are [[here|pre-and-post-commits]].
+* The Pre- and Post- Commit Functions are [[here|pre-and-post-commits]]
 * Other Functions (Importing/Exporting Data, Bucket Reloading, etc.) can be [[found here|other-functions]]
 
 ## Functions in Riak
@@ -16,21 +16,21 @@ MapReduce and Pre- and Post- Commits enable you to extend your Riak's capabiliti
 
 ## The Role of Riak Function Contrib
 
-One barrier to using these, however, is having to create numerous functions to use with your application. So, based on the idea of the awesome [clojure-contrib] repo, we are aiming to erase that barrier by tapping the collective power of the community to help us build out a library of contributed functions. 
+One barrier to using these, however, is having to create numerous functions to use with your application. So, based on the idea of the truly useful projects like [clojure-contrib](https://github.com/richhickey/clojure-contrib), we are aiming to erase that barrier by tapping the collective power of the community to help us build out a library of contributed functions. 
 
-The goal of Riak Function Contrib is three-fold: 
+With that in mind, the goal of Riak Function Contrib is three-fold: 
 	 
 1. Build a working library of functions to be used in applications running on Riak 
-2. Encourage participation from the community around MapReduce and Pre- and Post- Commit Code 
+2. Encourage participation from the community around MapReduce, Pre- and Post- Commit Hooks, and other Functions
 3. Expand the amount of "built in" functions that ship with Riak 
 		 
 ## How To Use This Site
 
 You can use this page to: 
 		 
-* Learn how to contribute a function to the repo 
 * Search for either a MapReduce Function or a Pre-/Post-Commit Function that may be suitable for your needs 
-* If you're simply looking for the Function Contrib Repo on Github, [[go here|]].
+* Learn how to contribute a function to the repo (see below)
+* If you're simply looking for the Function Contrib Repo on Github, [go here](https://github.com/basho/riak_function_contrib).
 
 ## Contributing 
 
