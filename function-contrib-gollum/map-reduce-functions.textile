@@ -16,7 +16,7 @@ h2. Contributed Functions
 [[Regex Key Match (JS)|regex_key_match]]
 [[Save the Result of a Map to a Riak Bucket/Key (Erlang)|save_reduce]]
 [[Sorting by Field (JS)|sorting-by-field]]
-
+[[Stats (JS)|stats]]
 
 
 
