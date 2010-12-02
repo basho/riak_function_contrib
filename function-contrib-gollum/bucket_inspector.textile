@@ -4,7 +4,7 @@ h1. Forcing Read Repair on a Bucket
 
 This Erlang function will read every key in a bucket and force read-repair on that bucket.
 
-The function takes the 4 arguments:
+The function takes the 2 arguments:
 bucket_inspector:inspect(bucket, riak node)
 
 ```erlang

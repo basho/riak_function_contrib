@@ -6,6 +6,8 @@ The file names _should_ reflect the nature of the function, so look to that for 
 
 Have a MapReduce Function to contribute? Check out he [[the contribution guidelines on the README to get start|https://github.com/basho/riak_function_contrib]] to get started.
 
+For more information on using these functions in your environment please reference the [[usage|usage]] section.
+
 h2. Contributed Functions
 
 [[Counting Keys in a Bucket (JS)|count_keys]]

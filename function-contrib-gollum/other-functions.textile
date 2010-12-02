@@ -6,6 +6,8 @@ The file names _should_ reflect the nature of the function, so look to that for 
 
 Have a function or script you would like to contribute? Check out the [[the contribution guidelines|https://github.com/basho/riak_function_contrib]] and send it our way. We would love to have it.
 
+For more information on using these functions in your environment please reference the [[usage|usage]] section.
+
 h2. Contributed Functions or Scripts
 
 [[Bucket Exporter (Erlang)|bucket_exporter]]

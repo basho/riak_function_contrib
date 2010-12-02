@@ -5,7 +5,7 @@ h1. Exporting Data from a Bucket to a Directory
 This Erlang function allows you to export the contents of a bucket to a directory on the the filesystem, you can export the entire contents of a bucket or a percentage of the key space. The export will be placed in several directories and the filenames will be the key of record and the extension you specify. This function is made to work with the [[Bucket Importer|bucket_importer]] available on this site as well.
 
 The function takes either 4 or 5 arguments:
-bucket_exporter:export_data(riak node, bucket, file extension, output directory, percentage of key space).
+bucket_exporter:export_data(riak node, bucket (must be a binary), file extension, output directory, percentage of key space).
 
 ```erlang
 -module(bucket_exporter).
@@ -73,7 +73,7 @@ truncate_keys(Keys, InputSize) ->
 h3. Tips and tricks for using this functions
 
 This function can executed two ways, you can export the entire contents of a bucket:
-bucket_exporter:export_data('riak@127.0.0.1', "bucket", "json", "/tmp/bucket_export").
+==bucket_exporter:export_data('riak@127.0.0.1', &lt;&lt;"bucket"&gt;&gt;, "json", "/tmp/bucket_export").==
 
 To export 10 percent of the keys in the bucket run the command with 5 arguments:
-bucket_exporter:export_data('riak@127.0.0.1', "bucket", "json", "/tmp/bucket_export", 0.1).
+==bucket_exporter:export_data('riak@127.0.0.1', &lt;&lt;"bucket"&gt;&gt;, "json", "/tmp/bucket_export", 0.1).==

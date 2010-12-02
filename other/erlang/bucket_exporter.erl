@@ -30,7 +30,7 @@ export_data(FromServer, Bucket, Extension, Directory, InputSize) ->
     {ok, Keys0} = CFrom:list_keys(Bucket),
     Keys = truncate_keys(Keys0, InputSize),
     io:format("Got ~p keys~n", [length(Keys)]),
-    export_data(CFrom, list_to_binary(Bucket), Extension, Directory, Keys, 0),
+    export_data(CFrom, Bucket, Extension, Directory, Keys, 0),
     io:format("Data export complete~n").
 
 export_data(_CFrom, _Bucket, _Extension, _Directory, [], _) ->
