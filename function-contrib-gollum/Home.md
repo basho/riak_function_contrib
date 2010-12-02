@@ -3,6 +3,7 @@ Riak Function Contrib is a joint effort between Basho, the company behind Riak, 
 # Where to start with Riak Function Contrib
 
 * If you're looking for an overview of the project, keep reading
+* All the code for this site can be found on the [Riak Function Contrib Repo on GitHub](https://github.com/basho/riak_function_contrib)
 * Scroll down to the **Contributing** section to learn how to add a function to the repo
 * The list of available MapReduce functions can be found [[here|map-reduce-functions]]
 * The Pre- and Post- Commit Functions are [[here|pre-and-post-commits]]
