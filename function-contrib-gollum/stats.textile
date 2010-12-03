@@ -4,7 +4,7 @@ h1. Stats Function Object
 
 [[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/mapreduce/js/stats.js]] 
  
-This a function object that can be used to generate commonly useful statistics on an array of numbers passed in.
+This is a function object that can be used to generate commonly useful statistics on an array of numbers passed in.
 Supports count, sum, min, max, percentiles, mean, variance, and stddev.
 
 
