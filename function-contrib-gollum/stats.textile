@@ -25,7 +25,7 @@ var Stats = function(data) {
 
     var ntileFunc = function(percentile){
         if (data.length == 1) return data[0];
-        var ntileRank = (percentile/100) * (data.length + 1);
+        var ntileRank = ((percentile/100) * (data.length - 1)) + 1;
         var integralRank = Math.floor(ntileRank);
         var fractionalRank = ntileRank - integralRank;
         var lowerValue = data[integralRank-1];
@@ -72,17 +72,17 @@ var eventStats = Stats(numEvents);
 /*
 JSON.stringify(sizeStats, null, 2);
 {
-  "count":8,
-  "min":0,
-  "max":8928,
-  "percentile25":12.5,
-  "median":271.5,
-  "percentile75":1061,
-  "percentile99":null, <-- bug here?
-  "mean":1412.375,
-  "sum":11299,
-  "variance":8220487.734374999,
-  "sdev":2867.1392945538937
+  "count": 8,
+  "min": 0,
+  "max": 8928,
+  "percentile25": 37.5,
+  "median": 271.5,
+  "percentile75": 717,
+  "percentile99": 8389.349999999999,
+  "mean": 1412.375,
+  "sum": 11299,
+  "variance": 8220487.734374999,
+  "sdev": 2867.1392945538937
 }
 
 JSON.stringify(eventStats, null, 2);
@@ -90,10 +90,10 @@ JSON.stringify(eventStats, null, 2);
   "count": 8,
   "min": 0,
   "max": 300,
-  "percentile25": 0.5,
+  "percentile25": 1.5,
   "median": 17.5,
-  "percentile75": 45,
-  "percentile99": null,
+  "percentile75": 35,
+  "percentile99": 282.49999999999994,
   "mean": 52.125,
   "sum": 417,
   "variance": 9049.109374999998,
@@ -104,7 +104,6 @@ JSON.stringify(eventStats, null, 2);
 
 h3. TODO
 
-* debug percentile99
 * Truncate percentages (configurable?)
 * Add argument for short circuiting sort?
 

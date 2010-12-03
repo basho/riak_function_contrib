@@ -39,7 +39,7 @@ var Stats = function(data) {
 
     var ntileFunc = function(percentile){
         if (data.length == 1) return data[0];
-        var ntileRank = (percentile/100) * (data.length + 1);
+        var ntileRank = ((percentile/100) * (data.length - 1)) + 1;
         var integralRank = Math.floor(ntileRank);
         var fractionalRank = ntileRank - integralRank;
         var lowerValue = data[integralRank-1];
