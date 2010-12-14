@@ -59,9 +59,9 @@ Also, be sure to name your overview file with the same name as your source file 
 
 ## Other Resources
 
-[MapReduce on the Riak Wiki](http://wiki.basho.com/display/RIAK/MapReduce)
-[Pre- and Post-Commit Hooks on the Riak Wiki](http://wiki.basho.com/display/RIAK/Pre-+and+Post-Commit+Hooks)
-[The Riak Fast Track](http://wiki.basho.com/display/RIAK/The+Riak+Fast+Track)
+* [MapReduce on the Riak Wiki](http://wiki.basho.com/display/RIAK/MapReduce)
+* [Pre- and Post-Commit Hooks on the Riak Wiki](http://wiki.basho.com/display/RIAK/Pre-+and+Post-Commit+Hooks)
+* [The Riak Fast Track](http://wiki.basho.com/display/RIAK/The+Riak+Fast+Track)
 
 
 
