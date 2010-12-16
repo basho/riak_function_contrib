@@ -11,7 +11,7 @@ Riak Function Contrib is a community-powered library of MapReduce, Pre-/Post-Com
 To use the code in this repo you can either browse the source files of the functions in the directory of your choice or head over to the [Riak Function Contrib site](http://contrib.basho.com) to search for useful code and read in depth descriptions provided by function authors.
 
 ## Issues or Questions
-
+                     
 If, at any point, you have a question or issue, email _mark@basho.com_ or join the [Riak Mailing List](http://lists.basho.com/mailman/listinfo/riak-users_lists.basho.com) and submit your question there. 
 
 ## Contributing
