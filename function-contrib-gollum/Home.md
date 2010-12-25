@@ -1,4 +1,4 @@
-Riak Function Contrib is a joint effort between Basho, the company behind Riak, and the Riak community to compile a library of functions and other useful code that can be used in applications everywhere. 
+Riak Function Contrib is a joint effort between [Basho](http://basho.com), the company behind Riak, and the Riak community to compile a library of functions and other useful code that can be used in applications everywhere. 
 
 # Where to start with Riak Function Contrib
 
