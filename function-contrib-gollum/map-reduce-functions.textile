@@ -17,6 +17,7 @@ h2. Contributed Functions
 [[Save the Result of a Map to a Riak Bucket/Key (Erlang)|save_reduce]]
 [[Sorting by Field (JS)|sorting-by-field]]
 [[Stats (JS)|stats]]
+[[Luwak Files (Erlang)|luwak_mr]]
 
 
 
