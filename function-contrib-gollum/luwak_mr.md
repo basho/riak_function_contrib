@@ -1,6 +1,8 @@
 # Map/Reducing Luwak File Data
 
-[Source File on GitHub](https://github.com/basho/riak_function_contrib/blob/master/mapred/erlang/luwak_mr.erl)
+_Contributed By_: [Bryan Fink](https://github.com/beerriot)
+
+[Source File on GitHub](https://github.com/basho/riak_function_contrib/blob/master/mapreduce/erlang/luwak_mr.erl)
 
 ## Description and Usage
 
