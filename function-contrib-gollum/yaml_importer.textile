@@ -1,0 +1,22 @@
+h1. Importing YAML
+
+[[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/other/ruby/yaml_importer.rb]]
+
+This Ruby program allows you to import a single YAML file into a bucket. The YAML will be converted to JSON. The YAML is expected to be structured as
+
+```
+key_name:
+  attribute_1: value
+  attribute_2: value
+```
+
+Usage information
+
+```
+Usage: load_yaml.rb [options]
+    -f, --file FILE                  YAML to load
+    -b, --bucket BUCKET              Bukket for mah data!
+    -h, --host HOSTNAME              IP/hostname for the Riak cluster
+    -p, --port PORT                  Port number
+        --help                       Display this screen
+```
