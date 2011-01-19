@@ -20,3 +20,7 @@ Usage: load_yaml.rb [options]
     -p, --port PORT                  Port number
         --help                       Display this screen
 ```
+
+The riak_yaml_importer library contains the functionality that is used by yaml_importer. There are two functions in riak_yaml_importer: 
+import_folder(host, port, bucket, file_list) which iterates over a list of files and calls
+import_file(host, port, bucket, file)
