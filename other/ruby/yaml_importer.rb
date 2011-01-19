@@ -18,15 +18,21 @@ require 'rubygems'
 require 'riak'
 require 'yaml'
 require 'optparse'
+require_relative 'riak_yaml_importer'
 
 options = {}
 
 optparse = OptionParser.new do |opts|
   opts.banner = "Usage: load_yaml.rb [options]"
 
-  options[:file] = nil
+  options[:file_list] = nil
   opts.on('-f', '--file FILE', String, 'YAML to load') do |file|
-    options[:file] = file
+    options[:file_list] = [file]
+  end
+  
+  options[:directory] = nil
+  opts.on('-d', '--directory DIRECTORY', String, 'Folder to recurse') do |directory|
+    options[:directory] = directory
   end
 
   options[:bucket] = nil
@@ -52,22 +58,11 @@ end
 
 optparse.parse!
 
-client = Riak::Client.new(:port => options[:port],
-                          :host => options[:host],
-                          :http_backend => :Excon)
+options[:file_list] = Dir.glob("#{options[:directory]}/**.yaml") if !options[:directory].nil?
 
-bukket = client.bucket(options[:bucket], :keys => false)
+puts options[:file_list]
 
-w_props = { :w => 0,
-  :dw => 0,
-  :returnbody => false
-}
-
-records = YAML::load_stream(File.open(options[:file]))
-
-records[0].each do |record|
-  o = bukket.new(record[0])
-  o.data = record[1]
-  o.content_type = 'application/json'
-  o.store(w_props)
-end
+import_folder(options[:host],
+              options[:port],
+              options[:bucket],
+              options[:file_list])
