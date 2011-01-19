@@ -21,6 +21,6 @@ Usage: load_yaml.rb [options]
         --help                       Display this screen
 ```
 
-The riak_yaml_importer library contains the functionality that is used by yaml_importer. There are two functions in riak_yaml_importer: 
+The [[riak_yaml_importer|https://github.com/basho/riak_function_contrib/blob/master/other/ruby/riak_yaml_importer.rb]] library contains the functionality that is used by yaml_importer. There are two functions in riak_yaml_importer: 
 import_folder(host, port, bucket, file_list) which iterates over a list of files and calls
 import_file(host, port, bucket, file)
