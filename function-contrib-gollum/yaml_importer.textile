@@ -13,8 +13,9 @@ key_name:
 Usage information
 
 ```
-Usage: load_yaml.rb [options]
+Usage: yaml_importer_.rb [options]
     -f, --file FILE                  YAML to load
+    -d, --directory DIRECTORY        Folder to recurse
     -b, --bucket BUCKET              Bukket for mah data!
     -h, --host HOSTNAME              IP/hostname for the Riak cluster
     -p, --port PORT                  Port number
