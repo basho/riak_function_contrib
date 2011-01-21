@@ -14,6 +14,7 @@ h2. Contributed Functions or Scripts
 [[Bucket Importer (Erlang)|bucket_importer]]
 [[Bucket Reloader (Erlang)|bucket_reloader]]
 [[Read Repair Bucket (Erlang)|bucket_inspector]]
+[[YAML Data Importer (Ruby)|yaml_importer]]
 
 
 
