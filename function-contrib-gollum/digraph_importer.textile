@@ -28,8 +28,8 @@ FredLabel = "{\\"name\\":\\"Fred\\",
               \\"surname\\":\\"Blogs\\", 
               \\"born\\":\\"3 January 1910\\"}".
 
-digraph:add_vertex(D, "joe",  JoeJson).
-digraph:add_vertex(D, "fred", FredJson).
+digraph:add_vertex(D, "joe",  JoeLabel).
+digraph:add_vertex(D, "fred", FredLabel).
 digraph:add_edge(D, "son",    "joe",  "fred").
 digraph:add_edge(D, "father", "fred", "joe").
 
