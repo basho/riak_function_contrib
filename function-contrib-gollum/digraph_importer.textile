@@ -21,8 +21,8 @@ A simple example where the vertex labels are json objects:
 
 ```erlang
 D = digraph:new([cyclic, protected]).
-digraph:add_vertex(D, "joe",  "{\\"name\\":\\"Joe\\",  \\"surname\\":\\"Blogs\\"}").
-digraph:add_vertex(D, "fred", "{\\"name\\":\\"Fred\\", \\"surname\\":\\"Blogs\\", \\"born\\":\\"3 January 1910\\"}").
+digraph:add_vertex(D, "joe",  "{\\\"name\\\":\\"Joe\\",  \\"surname\\":\\"Blogs\\"}").
+digraph:add_vertex(D, "fred", "{\\\"name\\\":\\"Fred\\", \\"surname\\":\\"Blogs\\", \\"born\\":\\"3 January 1910\\"}").
 digraph:add_edge(D, "son", "joe", "fred").
 digraph:add_edge(D, "father", "fred", "joe").
 
