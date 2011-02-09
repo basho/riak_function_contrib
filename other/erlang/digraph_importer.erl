@@ -47,8 +47,10 @@ map_edges(VTuple, [], _Ref, _Bucket) -> VTuple;
 map_edges(VTuple, [H|T], Ref, Bucket) ->
   {Edge, Src, Dest, _} = digraph:edge(Ref, H),
   {value, {_, Links}} = lists:keysearch(Src, 1, VTuple),
+  
   NewLinks = Links++[{{Bucket, to_binary(Dest)}, to_binary(Edge)}],
   NewVtuple = lists:keyreplace(Src, 1, VTuple, {Src, NewLinks}),
+  
   map_edges(NewVtuple, T, Ref, Bucket).
 
 
