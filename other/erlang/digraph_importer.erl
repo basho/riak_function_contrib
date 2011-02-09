@@ -21,7 +21,11 @@
 
 -export([import_digraph/5]).
 
-%% @spec import_digraph(Server :: ip_address(), Port :: integer(), Bucket :: bucket(), Ref :: digraph(), ContentType :: string()) -> ok.
+%% @spec import_digraph(Server :: ip_address(), 
+%%                      Port :: integer(), 
+%%                      Bucket :: bucket(), 
+%%                      Ref :: digraph(), 
+%%                      ContentType :: string()) -> ok.
 
 import_digraph(Server, Port, Bucket, Ref, ContentType) ->
   {ok, Client} = riakc_pb_socket:start(Server, Port),
@@ -33,7 +37,9 @@ import_digraph(Server, Port, Bucket, Ref, ContentType) ->
 
   MappedVTupleList = map_edges(VTupleList, Edges, Ref, Bucket),
   
-  lists:foreach(fun(VTuple) -> load_data(Client, VTuple, Ref, Bucket, ContentType) end, MappedVTupleList).
+  lists:foreach(fun(VTuple) -> 
+                  load_data(Client, VTuple, Ref, Bucket, ContentType) 
+                end, MappedVTupleList).
 
 
 map_edges(VTuple, [], _Ref, _Bucket) -> VTuple;

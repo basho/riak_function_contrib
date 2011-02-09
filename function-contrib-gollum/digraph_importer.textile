@@ -21,9 +21,16 @@ A simple example where the vertex labels are json objects:
 
 ```erlang
 D = digraph:new([cyclic, protected]).
-digraph:add_vertex(D, "joe",  "{\\"name\\":\\"Joe\\",  \\"surname\\":\\"Blogs\\"}").
-digraph:add_vertex(D, "fred", "{\\"name\\":\\"Fred\\", \\"surname\\":\\"Blogs\\", \\"born\\":\\"3 January 1910\\"}").
-digraph:add_edge(D, "son", "joe", "fred").
+
+JoeLabel  = "{\\"name\\":\\"Joe\\",  
+              \\"surname\\":\\"Blogs\\"}".
+FredLabel = "{\\"name\\":\\"Fred\\", 
+              \\"surname\\":\\"Blogs\\", 
+              \\"born\\":\\"3 January 1910\\"}".
+
+digraph:add_vertex(D, "joe",  JoeJson).
+digraph:add_vertex(D, "fred", FredJson).
+digraph:add_edge(D, "son",    "joe",  "fred").
 digraph:add_edge(D, "father", "fred", "joe").
 
 digraph_importer:import_digraph("127.0.0.1", 8082, <<"family">>, D, "application/json").
@@ -33,8 +40,15 @@ The same example where the vertex labels are erlang terms:
 
 ```erlang
 D = digraph:new([cyclic, protected]).
-digraph:add_vertex(D, "joe", [{name, "Joe"}, {surname, "Blogs"}]).
-digraph:add_vertex(D, "fred", [{name, "Fred"}, {surname, "Blogs"}, {born, "3 January 1910"}]).
+
+JoeLabel  = [{name, "Joe"}, 
+             {surname, "Blogs"}].
+FredLabel = [{name, "Fred"}, 
+             {surname, "Blogs"}, 
+             {born, "3 January 1910"}].
+
+digraph:add_vertex(D, "joe", JoeLabel).
+digraph:add_vertex(D, "fred", FredLabel).
 digraph:add_edge(D, "son", "joe", "fred").
 digraph:add_edge(D, "father", "fred", "joe").
 
@@ -48,7 +62,11 @@ h3. Source
 
 -export([import_digraph/5]).
 
-%% @spec import_digraph(Server :: ip_address(), Port :: integer(), Bucket :: bucket(), Ref :: digraph(), ContentType :: string()) -> ok.
+%% @spec import_digraph(Server :: ip_address(), 
+%%                      Port :: integer(), 
+%%                      Bucket :: bucket(), 
+%%                      Ref :: digraph(), 
+%%                      ContentType :: string()) -> ok.
 
 import_digraph(Server, Port, Bucket, Ref, ContentType) ->
   {ok, Client} = riakc_pb_socket:start(Server, Port),
@@ -60,7 +78,9 @@ import_digraph(Server, Port, Bucket, Ref, ContentType) ->
 
   MappedVTupleList = map_edges(VTupleList, Edges, Ref, Bucket),
   
-  lists:foreach(fun(VTuple) -> load_data(Client, VTuple, Ref, Bucket, ContentType) end, MappedVTupleList).
+  lists:foreach(fun(VTuple) -> 
+                  load_data(Client, VTuple, Ref, Bucket, ContentType) 
+                end, MappedVTupleList).
 
 
 map_edges(VTuple, [], _Ref, _Bucket) -> VTuple;
