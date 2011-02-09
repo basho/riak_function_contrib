@@ -13,14 +13,19 @@ The function uses the Erlang PBC client, so the correct ip address and port must
 
 There are currently some restrictions regarding the construction of the digraph:
 The vertices should be created with 
+
 ```erlang 
 digraph:add_vertex/2
 ``` 
+
 or 
+
 ```erlang 
 digraph:add_vertex/3
 ``` 
+
 and the edges need to be created with 
+
 ```erlang 
 digraph:add_edge/5
 ```  
@@ -28,6 +33,7 @@ digraph:add_edge/5
 h3. Examples
 
 A simple example where the vertex labels are json objects:
+
 ```erlang
 D = digraph:new([cyclic, protected]).
 digraph:add_vertex(D, "joe",  "{\\"name\\":\\"Joe\\",  \\"surname\\":\\"Blogs\\"}").
@@ -39,6 +45,7 @@ digraph_importer:import_digraph("127.0.0.1", 8082, <<"family">>, D, "application
 ```
 
 The same example where the vertex labels are erlang terms:
+
 ```erlang
 D = digraph:new([cyclic, protected]).
 digraph:add_vertex(D, "joe", [{name, "Joe"}, {surname, "Blogs"}]).
