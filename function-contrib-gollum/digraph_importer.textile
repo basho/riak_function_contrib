@@ -30,8 +30,8 @@ FredLabel = "{\\"name\\":\\"Fred\\",
 
 digraph:add_vertex(D, "joe",  JoeLabel).
 digraph:add_vertex(D, "fred", FredLabel).
-digraph:add_edge(D, "son",    "joe",  "fred").
-digraph:add_edge(D, "father", "fred", "joe").
+digraph:add_edge(D, "son",    "joe",  "fred", []).
+digraph:add_edge(D, "father", "fred", "joe", []).
 
 digraph_importer:import_digraph("127.0.0.1", 8082, <<"family">>, D, "application/json").
 ```
@@ -49,8 +49,8 @@ FredLabel = [{name, "Fred"},
 
 digraph:add_vertex(D, "joe", JoeLabel).
 digraph:add_vertex(D, "fred", FredLabel).
-digraph:add_edge(D, "son", "joe", "fred").
-digraph:add_edge(D, "father", "fred", "joe").
+digraph:add_edge(D, "son", "joe", "fred", []).
+digraph:add_edge(D, "father", "fred", "joe", []).
 
 digraph_importer:import_digraph("127.0.0.1", 8082, <<"family">>, D, "application/x-erlang-binary").
 ```
