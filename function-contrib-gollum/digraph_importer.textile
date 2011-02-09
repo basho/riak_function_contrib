@@ -1,6 +1,6 @@
 h1. Importing an Erlang digraph
 
-+Contributed By:+ [[Ryan Maclear|https://github.com/Ryan Maclear]]
++Contributed By:+ [[Ryan Maclear|https://github.com/ryanmaclear]]
 
 [[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/other/erlang/digraph_importer.erl]] 
 
