@@ -19,19 +19,21 @@
 
 -module(digraph_importer).
 
--export([import_digraph/4]).
+-export([import_digraph/5]).
 
-%% @spec import_digraph(ToServer :: node(), ToBucket :: string(), Ref :: digraph(), ContentType :: string()) -> ok.
+%% @spec import_digraph(Server :: ip_address(), Port :: integer(), Bucket :: bucket(), Ref :: digraph(), ContentType :: string()) -> ok.
 
-import_digraph(ToServer, ToBucket, Ref, ContentType) ->
-  {ok, Client} = riak:client_connect(ToServer),
+import_digraph(Server, Port, Bucket, Ref, ContentType) ->
+  {ok, Client} = riakc_pb_socket:start(Server, Port),
+  
   Vertices = digraph:vertices(Ref),
-  Edges = digraph:edges(Ref),
+  Edges    = digraph:edges(Ref),
   
   VTupleList = [{Vertex, []} || Vertex <- Vertices],
-  MappedVTupleList = map_edges(VTupleList, Edges, Ref, ToBucket),
 
-  lists:foreach(fun(VTuple) -> load_data(Client, VTuple, Ref, ToBucket, ContentType) end, MappedVTupleList).
+  MappedVTupleList = map_edges(VTupleList, Edges, Ref, Bucket),
+  
+  lists:foreach(fun(VTuple) -> load_data(Client, VTuple, Ref, Bucket, ContentType) end, MappedVTupleList).
 
 
 map_edges(VTuple, [], _Ref, _Bucket) -> VTuple;
@@ -39,21 +41,28 @@ map_edges(VTuple, [], _Ref, _Bucket) -> VTuple;
 map_edges(VTuple, [H|T], Ref, Bucket) ->
   {Edge, Src, Dest, _} = digraph:edge(Ref, H),
   {value, {_, Links}} = lists:keysearch(Src, 1, VTuple),
-  NewLinks = Links++[{{Bucket, Dest}, Edge}],
+  NewLinks = Links++[{{Bucket, to_binary(Dest)}, to_binary(Edge)}],
   NewVtuple = lists:keyreplace(Src, 1, VTuple, {Src, NewLinks}),
   map_edges(NewVtuple, T, Ref, Bucket).
 
 
-load_data(Client, {Vertex, LinkList}, Ref, ToBucket, ContentType) ->
+load_data(Client, {Vertex, LinkList}, Ref, Bucket, ContentType) ->
   {_, Label} = digraph:vertex(Ref, Vertex),
 
-  Key      = to_binary(Vertex),
-  Value    = to_binary(Label),
+  Key   = to_binary(Vertex),
+  Value = 
+          if ContentType == "application/x-erlang-binary" ->
+              term_to_binary(Label);
+            true ->
+              to_binary(Label)
+          end,
+
   Metadata = dict:from_list([{<<"content-type">>, ContentType},
-                             {<<"Links">>, LinkList}]),
+                             {<<"Links">>,        LinkList}]),
   
-  Object = riak_object:new(to_binary(ToBucket), Key, Value, Metadata),
-  Client:put(Object, 1),
+  Object = riakc_obj:new(to_binary(Bucket), Key, Value),
+  MDObject = riakc_obj:update_metadata(Object, Metadata),
+  riakc_pb_socket:put(Client, MDObject),
   io:format("Vertex: ~p~n", [Key]).
 
 
