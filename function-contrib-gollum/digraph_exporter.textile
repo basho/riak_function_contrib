@@ -1,0 +1,10 @@
+h1. Exporting to an Erlang digraph
+
++Contributed By:+ [[Ryan Maclear|https://github.com/ryanmaclear]]
+
+[[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/other/erlang/digraph_export.erl]] 
+
+
+
+
+

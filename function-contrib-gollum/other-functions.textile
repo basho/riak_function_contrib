@@ -16,5 +16,6 @@ h2. Contributed Functions or Scripts
 [[Read Repair Bucket (Erlang)|bucket_inspector]]
 [[YAML Data Importer (Ruby)|yaml_importer]]
 [[Digraph Importer (Erlang)|digraph_importer]]
+[[Digraph Exporter (Erlang)|digraph_exporter]]
 
 
