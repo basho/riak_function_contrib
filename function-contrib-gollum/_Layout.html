@@ -13,7 +13,7 @@
          Remove this if you use the .htaccess -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>{{ page.title }} : Basho Contrib</title>
+    <title>Basho: {{ page.title }}: Riak Function Contrib</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -30,6 +30,7 @@
 
     <!-- Gollum syntax highlighting -->
     <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/riak_function_contrib.css">
 
     <!-- Uncomment if you are specifically targeting less enabled mobile browsers
          <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
@@ -116,6 +117,16 @@
 
         <!--gollum page content -->
         <article>
+          <hgroup>
+            <h1>
+              {% if page.title == 'Home' %}
+              Riak Function Contrib
+              {% else %}
+              {{ page.title }}
+              {% endif %}
+            </h1>
+            <div class="clearfix"></div>
+          </hgroup>
           {{ page.content }}
         </article>
         <!-- end gollum page content -->
