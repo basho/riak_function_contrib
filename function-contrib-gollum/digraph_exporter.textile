@@ -2,7 +2,7 @@ h1. Exporting to an Erlang digraph
 
 +Contributed By:+ [[Ryan Maclear|https://github.com/ryanmaclear]]
 
-[[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/other/erlang/digraph_export.erl]] 
+[[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/other/erlang/digraph_exporter.erl]] 
 
 This Erlang module allows you to construct an Erlang digraph from objects in a bucket. Each object will result in a vertex being created, identified by the key, and optionally, the object value will be used for the vertex label. Links on objects will result in edges being created as specified by each link. An optional filter list can be specified which will result in only specific objects matching the filter being used to construct the digraph. If the filter list is omitted, the entire bucket will be used.
 
