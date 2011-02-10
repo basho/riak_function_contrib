@@ -6,6 +6,8 @@ h1. Importing an Erlang digraph
 
 This Erlang function allows you to import an Erlang digraph into a bucket. Each vertex corresponds to an object, with the key being assigned the vertex, and the value being assigned the vertex label. Edges are mapped to links on the corresponding object. Edge labels are ignored. A content type is required for the label. If the label contains erlang terms, use a content type of application/x-erlang-binary. 
 
+The digraphs imported can be recreated using [[Digraph Exporter|digraph_exporter]] found elsewhere on this site.
+
 The function takes 5 arguments:
 digraph_importer:import_digraph(address of server, port, bucket, digraph, content-type).
 
