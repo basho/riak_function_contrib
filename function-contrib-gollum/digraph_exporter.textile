@@ -13,6 +13,7 @@ The function takes 5 or 6 parameters:
 # digraph_exporter:export_digraph(address of server, port, bucket, filter_list, digraph, boolean use object value for label).
 
 h3. Notes
+
 The digraph needs to be passed into the function, so it needs to exist and have the correct properties (eg. [cyclic, protected]).
 
 Since digraphs are created in ETS, there is a finite limit on the number of vertices and edges that can be created, so be sure that you use filter lists where necessary.
@@ -28,7 +29,7 @@ h3. Examples
 To create a digraph from an entire bucket, using the object values for the label:
 
 ```erlang
- A= digraph:new([cyclic, protected]).                                     
+ A = digraph:new([cyclic, protected]).                                     
  
  digraph_exporter:export_digraph("127.0.0.1", 8082, <<"networks">>, A, true).
 ```
@@ -36,12 +37,12 @@ To create a digraph from an entire bucket, using the object values for the label
 To create a digraph from an entire bucket, with vetex labels:
 
 ```erlang
- A= digraph:new([cyclic, protected]).                                     
+ A = digraph:new([cyclic, protected]).                                     
  
  digraph_exporter:export_digraph("127.0.0.1", 8082, <<"networks">>, A, false).
 ```
 
-To create a digraph from a bucket, using only objects with keys starting with "home", using the object values for the label:
+To create a digraph from a bucket, using only objects with keys starting with \"home\", using the object values for the label:
 
 ```erlang
  A= digraph:new([cyclic, protected]).                                     
@@ -133,8 +134,8 @@ build_map_fun() ->
               
               MetaData    = dict:to_list(MetaDataDict),
 
-              ContentType = proplists:get_value(<<\"content-type\">>, MetaData, \"\"),
-              Links       = proplists:get_value(<<\"Links\">>, MetaData, []),
+              ContentType = proplists:get_value(<<\\"content-type\\">>, MetaData, \\"\\"),
+              Links       = proplists:get_value(<<\\"Links\\">>, MetaData, []),
               
               [{riak_object:key(Object), Value, ContentType, Links}]
             end.",
