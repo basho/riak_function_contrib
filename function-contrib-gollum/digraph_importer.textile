@@ -13,7 +13,7 @@ digraph_importer:import_digraph(address of server, port, bucket, digraph, conten
 
 h3. Notes
 
-(Note: The cluster used for the example below is the dev cluster used in the Fast Track, so the port number used is 8082, and not the default port of 8087).
+(*Note*: The cluster used for the example below is the dev cluster used in the Fast Track, so the port number used is 8082, and not the default port of 8087).
 
 The function uses the Erlang Protocol Buffer client, so the correct ip address and port must be specified.
 
