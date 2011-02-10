@@ -28,6 +28,8 @@ Setting the last parameter of the function to false will result in all vetices h
 
 h3. Examples
 
+(Note: The cluster used for the example below is the dev cluster used in the Fast Track, so the port number used is 8082, and not the default port of 8087).
+
 To create a digraph from an entire bucket, using the object values for the label:
 
 ```erlang
