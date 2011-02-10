@@ -11,11 +11,11 @@ digraph_importer:import_digraph(address of server, port, bucket, digraph, conten
 
 h3. Notes
 
-# The function uses the Erlang Protocol Buffer client, so the correct ip address and port must be specified.
+The function uses the Erlang Protocol Buffer client, so the correct ip address and port must be specified.
 
-# There are currently some restrictions regarding the construction of the digraph:
-## The vertices should be created with digraph:add_vertex/2 or digraph:add_vertex/3
-## and the edges need to be created with digraph:add_edge/5
+There are currently some restrictions regarding the construction of the digraph:
+# The vertices should be created with digraph:add_vertex/2 or digraph:add_vertex/3
+# and the edges need to be created with digraph:add_edge/5
 
 h3. Examples
 
@@ -125,3 +125,4 @@ to_binary(Item) when is_list(Item) ->
 to_binary(Item) when is_binary(Item) ->
   Item.
 ```
+

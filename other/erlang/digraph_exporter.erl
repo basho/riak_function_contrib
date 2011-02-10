@@ -18,12 +18,34 @@
 
 -module(digraph_exporter).
 
--export([export_digraph/6]).
+-export([export_digraph/5, export_digraph/6]).
+
+%% @spec export_digraph(Server :: ip_address(),
+%%                      Port :: integer(),
+%%                      Bucket :: bucket(),
+%%                      Ref :: digraph(),
+%%                      UseValue :: boolean()) -> ok.
+
+export_digraph(Server, Port, Bucket, Ref, UseValue) ->
+  export_digraph(Server, Port, Bucket, undefined, Ref, UseValue).
+
+%% @spec export_digraph(Server :: ip_address(),
+%%                      Port :: integer(),
+%%                      Bucket :: bucket(),
+%%                      FilterList :: list(),
+%%                      Ref :: digraph(),
+%%                      UseValue :: boolean()) -> ok.
 
 export_digraph(Server, Port, Bucket, FilterList, Ref, UseValue) ->
   {ok, Client} = riakc_pb_socket:start(Server, Port),
   
-  Input = {Bucket, [FilterList]},
+  Input = 
+          case FilterList of
+            undefined ->
+              Bucket;
+            _ ->
+              {Bucket, [FilterList]}
+          end,
 
   MapFun = build_map_fun(),
   
@@ -53,6 +75,7 @@ build_vertices(Ref, UseValue, [{Key, Value, ContentType, _}|T]) ->
   Vertex = binary_to_list(Key),
   
   digraph:add_vertex(Ref, Vertex, Label),
+  io:format("vertex: ~s~n", [Vertex]), 
   build_vertices(Ref, UseValue, T).
 
 
@@ -62,7 +85,8 @@ add_edges(Ref, [{Key, _, _, Links}|T]) ->
                   Edge  = binary_to_list(Tag),
                   VSrc  = binary_to_list(Key),
                   VDest = binary_to_list(Dest),
-                  digraph:add_edge(Ref, Edge, VSrc, VDest, "")
+                  digraph:add_edge(Ref, Edge, VSrc, VDest, ""),
+                  io:format("edge: ~s~n", [Edge]) 
                 end, Links),
   add_edges(Ref, T).
 
