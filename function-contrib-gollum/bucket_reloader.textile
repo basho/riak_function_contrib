@@ -72,11 +72,19 @@ truncate_keys(Keys, InputSize) ->
 h3. Tips and tricks for using this functions
 
 Copy the contents of a bucket to a different bucket:
+
+```erlang
 bucket_reloader:reload('riak@127.0.0.1', 'riak@127.0.0.1', <<"bucket">>, <<"new_bucket">>).
+```
 
 To export the entire contents of a bucket from one Riak node to another:
+
+```erlang
 bucket_reloader:reload('riak@192.168.1.15', 'riak@127.0.0.1', <<"bucket">>, <<"bucket">>).
+```
 
 To export 10 percent of the keys in a bucket run the following:
-bucket_reloader:reload('riak@192.168.1.15', 'riak@127.0.0.1', <<"bucket">>, <<"bucket">>, 0.1).
 
+```erlang
+bucket_reloader:reload('riak@192.168.1.15', 'riak@127.0.0.1', <<"bucket">>, <<"bucket">>, 0.1).
+```

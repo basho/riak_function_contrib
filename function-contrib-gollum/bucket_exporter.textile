@@ -73,7 +73,13 @@ truncate_keys(Keys, InputSize) ->
 h3. Tips and tricks for using this functions
 
 This function can executed two ways, you can export the entire contents of a bucket:
-==bucket_exporter:export_data('riak@127.0.0.1', &lt;&lt;"bucket"&gt;&gt;, "json", "/tmp/bucket_export").==
+
+```erlang
+bucket_exporter:export_data('riak@127.0.0.1',<<"bucket">>, "json", "/tmp/bucket_export").
+```
 
 To export 10 percent of the keys in the bucket run the command with 5 arguments:
-==bucket_exporter:export_data('riak@127.0.0.1', &lt;&lt;"bucket"&gt;&gt;, "json", "/tmp/bucket_export", 0.1).==
+
+```erlang
+bucket_exporter:export_data('riak@127.0.0.1',<<"bucket">>, "json", "/tmp/bucket_export", 0.1).
+```

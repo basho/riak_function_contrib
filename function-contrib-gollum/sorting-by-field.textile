@@ -8,18 +8,20 @@ This a JavaScript MapReduce function that is actually written in [[CoffeeScript|
 
 
 *Here is what the functions looks like in CoffeeScript:*
-```js
-	@sort = (values, arg) ->
-	 field = arg?.by
-	 reverse = arg?.order is 'desc'
-	 values.sort (a, b) ->
-	   if reverse then [a,b] = [b,a]
-	   if a?[field] < b?[field] then -1
-	   else if a?[field] is b?[field] then 0
-	   else if a?[field] > b?[field] then 1@
+
+```coffeescript
+sort = (values, arg) ->
+ field = arg?.by
+ reverse = arg?.order is 'desc'
+ values.sort (a, b) ->
+   if reverse then [a,b] = [b,a]
+   if a?[field] < b?[field] then -1
+   else if a?[field] is b?[field] then 0
+   else if a?[field] > b?[field] then 1
 ```
 
 *This compiles into JavaScript and looks like this:*
+
 ```js
 var sort = function(values, arg) {
  var field = (typeof arg === "undefined" || arg === null) ? undefined : arg.by;
@@ -51,13 +53,14 @@ b[field])) {
 h3. Tips and tricks for using this functions
 
 Here is how it's actually used with [[riak-js|riakjs.org]], Riak's Node.js client.
+
 ```js
-@db
+db
  .add('airlines')
  .link({ bucket: 'flights', keep: false })
  .map('Riak.mapValuesJson')
  .reduce('Contrib.sort', { by: 'passengers', order: 'desc' })
- .run()@
+ .run()
 ```
 
 Default sorting is ascending ('asc') so you can drop it. Specify 'desc' for descending. The 'by' property is required.

@@ -6,7 +6,7 @@ h1. Importing YAML
 
 This Ruby program allows you to import a single YAML file into a bucket. The YAML will be converted to JSON. The YAML is expected to be structured as
 
-```
+```yaml
 key_name:
   attribute_1: value
   attribute_2: value
@@ -26,8 +26,12 @@ Usage: yaml_importer_.rb [options]
 
 The [[riak_yaml_importer|https://github.com/basho/riak_function_contrib/blob/master/other/ruby/riak_yaml_importer.rb]] library contains the functionality that is used by yaml_importer. There are two functions in riak_yaml_importer: 
 
-@import_folder(host, port, bucket, file_list)@ 
+```ruby
+import_folder(host, port, bucket, file_list)
+```
 
 which iterates over a list of files and calls:
 
-@import_file(host, port, bucket, file)@
+```ruby
+import_file(host, port, bucket, file)
+```
