@@ -19,8 +19,9 @@ get_keys(Value,_Keydata,_Arg) ->
 ```
 
 The Javascript function:
+
 ```js
-get_keys(object, keyData, arg){
+function get_keys(object, keyData, arg){
   return [[object.bucket, object.key]]
 }
 ```

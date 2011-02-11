@@ -34,5 +34,7 @@ load_data(FName, Client, Bucket, ContentType) ->
 h3. Tips and tricks for using this functions
 
 If you wanted to import the contents of a directory that contained JSON you could run the function as follows:
-bucket_importer:import_data('riak@127.0.0.1', "bucket", "/location/of/data", "application/json").
 
+```erlang
+bucket_importer:import_data('riak@127.0.0.1', "bucket", "/location/of/data", "application/json").
+```

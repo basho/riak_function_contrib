@@ -27,5 +27,7 @@ inspect_objects(Bucket, [H|T], Client) ->
 h3. Tips and tricks for using this functions
 
 To inspect a bucket run as follows (Bucket should be a binary and Riak node an Atom):
-==bucket_inpsector:inspect(&lt;&lt;"bucket"&gt;&gt;, 'riak@127.0.0.1').==
 
+```erlang
+bucket_inspector:inspect(<<"bucket">>, 'riak@127.0.0.1').
+```
