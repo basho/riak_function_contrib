@@ -27,6 +27,12 @@ Date.prototype.setISO8601 = function (string) {
     this.setTime(Number(time));
 }
 
+Date.iso8601 = function (string) {
+  d = new Date;
+  d.setISO8601(string);
+  return d;
+}
+
 Date.prototype.iso8601 = function (format, offset) {
     /* accepted values for the format [1-6]:
      1 Year:
