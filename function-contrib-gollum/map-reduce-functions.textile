@@ -16,8 +16,6 @@ h2. Contributed Functions
 [[Regex Key Match (JS)|regex_key_match]]
 [[Save the Result of a Map to a Riak Bucket/Key (Erlang)|save_reduce]]
 [[Sorting by Field (JS)|sorting-by-field]]
+[[ISO8601 DateTimes (JS)|iso8601]]
 [[Stats (JS)|stats]]
 [[Luwak Files (Erlang)|luwak_mr]]
-
-
-

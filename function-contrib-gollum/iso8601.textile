@@ -1,0 +1,28 @@
+h1. ISO8601 handling
+
+[[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/mapreduce/js/iso8601.js]] 
+
+Loading iso8601.js extends the Date prototype with two functions: setISO8601
+and iso8601, and adds a parsing helper: Date.iso8601. As ISO8601 W3C profile is
+one of the most common ways to serialize dates and times in JSON, you may find
+this useful.
+
+h3. Example Usage
+
+Convert a Date to an ISO8601 representation.
+
+/*
+(new Date).iso8601();    // "2011-02-19T18:30:56.076Z"
+*/
+
+Convert an ISO8601 string to a Date.
+
+/*
+Date.iso8601("2011-02-19T18:30:56.076Z");    // Sat Feb 19 2011 10:30:56 GMT-0800 (PST)
+*/
+
+h3. Notes
+
+Date.prototype.setISO8601 is provided for consistency with the other Date
+prototype functions. It takes an ISO8601 string, sets the receiver's value to
+the date represented therein, and returns undefined.
