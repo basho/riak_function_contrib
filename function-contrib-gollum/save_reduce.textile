@@ -11,28 +11,15 @@ This Erlang function will save the output of a map to a bucket and key (passed b
 -export([save_reduce/2]).
 
 %%Arg is a [bucket, key] combination
-save_reduce(Values, Arg) ->
+save_reduce([Data | _], [Bucket, Key]) ->
     {ok, C} = riak:local_client(),
-    [Bucket, Key] = Arg,
-    Data = case Values of
-               [] ->
-                   skip;
-               [V] ->
-                   V;
-               V when is_list(V) ->
-                   hd(V);
-               _ ->
-                   skip
-           end,
-    if
-        Data =:= skip ->
-            [];
-        true ->
-            Json = iolist_to_binary(mochijson2:encode(Data)),
-            Object = riak_object:new(Bucket, Key, Json, "application/json"),
-            C:put(Object, 1),
-            []
-    end.
+    Json = iolist_to_binary(mochijson2:encode(Data)),
+    Object = riak_object:new(Bucket, Key, Json, "application/json"),
+    C:put(Object, 1),
+    [];
+save_reduce(_, _) ->
+    [].
+
 ```
 
 
