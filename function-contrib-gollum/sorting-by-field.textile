@@ -1,6 +1,6 @@
 h1. Reduce Phase to Sort by Field
 
-+Contributed By:+ [[Francisco Treacy|https://github.com/frannk06]]
++Contributed By:+ [[Francisco Treacy|https://github.com/frank06]]
 
 [[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/mapreduce/js/sorting-by-field.js]] 
  
