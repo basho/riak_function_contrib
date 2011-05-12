@@ -6,6 +6,7 @@ h1. Slenderize Map Function
  
 This function allows for making a Javascript object thinner by deleting some of its properties. Useful in some scenarios to improve performance when dealing with large objects, and prevent VMs of running out of memory.
 
+
 *Javascript source:*
 ```js
 var slenderize = function (v, kd, arg) {
