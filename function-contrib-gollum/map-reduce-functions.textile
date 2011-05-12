@@ -19,3 +19,4 @@ h2. Contributed Functions
 [[ISO8601 DateTimes (JS)|iso8601]]
 [[Stats (JS)|stats]]
 [[Luwak Files (Erlang)|luwak_mr]]
+[[Slenderize (JS)|slenderize]]
