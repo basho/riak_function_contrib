@@ -13,6 +13,7 @@ h2. Contributed Functions or Scripts
 [[Bucket Exporter (Erlang)|bucket_exporter]]
 [[Bucket Importer (Erlang)|bucket_importer]]
 [[Bucket Reloader (Erlang)|bucket_reloader]]
+[[Programatically Edit app.config files (Erlang)|app_config_edit]]
 [[Read Repair Bucket (Erlang)|bucket_inspector]]
 [[YAML Data Importer (Ruby)|yaml_importer]]
 [[Digraph Importer (Erlang)|digraph_importer]]
