@@ -21,12 +21,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-    <link rel="shortcut icon" href="http://www.basho.com/favicon.ico">
-    <link rel="apple-touch-icon" href="http://www.basho.com/apple-touch-icon.png">
+    <link rel="shortcut icon" href="http://assets.basho.com/favicon.ico">
+    <link rel="apple-touch-icon" href="http://assets.basho.com/apple-touch-icon.png">
 
 
     <!-- CSS : implied media="all" -->
-    <link rel="stylesheet" href="http://www.basho.com/css/style.css?v=2">
+    <link rel="stylesheet" href="http://assets.basho.com/css/style.css?v=2">
 
     <!--[if lte IE 8 ]>
       <link rel="stylesheet" href="http://www.basho.com/css/ie.css">
@@ -40,7 +40,7 @@
          <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
 
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-    <script src="http://www.basho.com/js/libs/modernizr-1.6.min.js"></script>
+    <script src="http://assets.basho.com/js/libs/modernizr-1.6.min.js"></script>
 
   </head>
 
@@ -48,30 +48,14 @@
     <a id="github-ribbon" href="http://github.com/basho/riak_function_contrib">Fork me on GitHub</a>
     <div id="container">
       <header>
-        <h1><a href="/"><img src="http://www.basho.com/images/logo_contrib.png" alt="basho"></a></h1>
+        <h1><a href="/"><img src="http://assets.basho.com/images/logo_contrib.png" alt="basho"></a></h1>
         <nav>
           <ul class="dropdown">
-            <li><a href="http://www.basho.com/company_about.php">Company</a>
-              <ul class="sub_menu">
-                <li><a href="http://www.basho.com/company_about.php">About Us</a></li>
-                <li><a href="http://www.basho.com/company_team.php">Our Team</a></li>
-                <li><a href="http://www.basho.com/company_board.php">Our Board</a></li>
-                <li><a href="http://www.basho.com/company_news.php">News</a></li>
-              </ul>
-            </li>
-            <li><a href="http://www.basho.com/products_riak_overview.php">Products</a>
-              <ul class="sub_menu">
-                <li><a href="http://www.basho.com/products_riak_overview.php">Riak Overview</a></li>
-                <li><a href="http://www.basho.com/products_who.php">Who Uses It</a></li>
-                <li><a href="http://www.basho.com/products_architecture.php">Architecture</a></li>
-                <li><a href="http://www.basho.com/products_get_started.php">Get Started</a></li>
-                <li><a href="http://www.basho.com/products_lab.php">Basho Labs</a></li>
-                <li><a href="http://www.basho.com/products_open_source.php">Open Source Projects</a></li>
-              </ul>
+            <li><a href="http://www.basho.com/">Company</a>
             </li>
             <li><a href="#">Developers</a>
               <ul class="sub_menu">
-                <li><a href="http://wiki.basho.com/">Documentation Wiki</a></li>
+                <li><a href="http://wiki.basho.com/">Documentation</a></li>
                 <li><a href="https://help.basho.com">Knowledge Base</a></li>
                 <li><a href="http://lists.basho.com/mailman/listinfo/riak-users_lists.basho.com">Mailing List</a></li>
                 <li><a href="http://contrib.basho.com/">Riak Function Contrib</a></li>
@@ -81,17 +65,14 @@
               </ul>
             </li>
             <li><a href="http://blog.basho.com/">Blog</a></li>
-            <li><a href="http://www.basho.com/contact.php">Contact</a></li>
+            <li><a href="http://info.basho.com/contact.html">Contact</a></li>
           </ul>
-
-
         </nav>
-        <form action="http://www.basho.com/search.php" method="get">
+        <form action="http://s.basho.com/search.php" method="get">
           <div class="search">
             <input type="text" name="q" />
-            <input type="image" src="http://www.basho.com/images/btn_search.png" />
-          </div>
-        </form>
+            <input type="image" src="http://s.basho.com/images/btn_search.png" />
+
       </header>
 
       <div id="main">
@@ -107,6 +88,7 @@
           <h3>Pre/Post Commit Functions</h3>
           <ul>
             <li><a href="/validate_json.html">Validate JSON Pre-commit (JS)</a></li>
+            <li><a href="/validate_json_erl.html">Validate JSON Pre-commit (Erlang)</a></li>
             <li><a href="/pre-and-post-commits.html">More...</a></li>
           </ul>
           <br />
@@ -157,15 +139,15 @@
 
     <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
-    <script>!window.jQuery && document.write(unescape('%3Cscript src="http://www.basho.com/js/libs/jquery-1.4.2.js"%3E%3C/script%3E'))</script>
+    <script>!window.jQuery && document.write(unescape('%3Cscript src="http://assets.basho.com/js/libs/jquery-1.4.2.js"%3E%3C/script%3E'))</script>
 
 
     <!-- scripts concatenated and minified via ant build script-->
-    <script src="http://www.basho.com/js/plugins.js"></script>
-    <script src="http://www.basho.com/js/script.js"></script>
+    <script src="http://assets.basho.com/js/plugins.js"></script>
+    <script src="http://assets.basho.com/js/script.js"></script>
     <!-- end concatenated and minified scripts-->
 
-    <script type="text/javascript" language="javascript" src="http://www.basho.com/js/jquery.dropdownPlain.js"></script>
+    <script type="text/javascript" language="javascript" src="http://assets.basho.com/js/jquery.dropdownPlain.js"></script>
 
     <!--[if lt IE 7 ]>
         <script src="http://www.basho.com/js/libs/dd_belatedpng.js"></script>
@@ -173,8 +155,8 @@
         <![endif]-->
 
     <!-- yui profiler and profileviewer - remove for production -->
-    <script src="http://www.basho.com/js/profiling/yahoo-profiling.min.js"></script>
-    <script src="http://www.basho.com/js/profiling/config.js"></script>
+    <script src="http://assets.basho.com/js/profiling/yahoo-profiling.min.js"></script>
+    <script src="http://assets.basho.com/js/profiling/config.js"></script>
     <!-- end profiling code -->
 
     <script type="text/javascript" src="http://fast.fonts.com/jsapi/ec69692f-f404-4e54-ac9e-f957fa43199c.js"></script>
@@ -200,6 +182,9 @@
       document.write(unescape("%3Cscript src='" + document.location.protocol + "//" + hs_ppa + "/salog.js.aspx' type='text/javascript'%3E%3C/script%3E"));
     </script>
     <!-- End of HubSpot Logging Code -->
+    <script type="text/javascript"> document.write('<scr'+'ipt type="text/javascript" src="' + document.location.protocol + '//munchkin.marketo.net/munchkin.js"><\/scr'+'ipt>');</script>
+    <script>mktoMunchkin("721-DGT-611");</script>
+
 
   </body>
 </html>

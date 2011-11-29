@@ -11,4 +11,4 @@ For more information on using hooks in your environment please reference the [[R
 h2. Contributed Pre- and Post-Commit Functions
 
 [[Validate JSON (Pre)|validate_json]]
-
+[[Validate JSON (Pre) using Erlang|validate_json_erl]]

@@ -26,7 +26,7 @@
 import_data(ToServer, Bucket, Directory, ContentType) ->
    {ok, Client} = riak:client_connect(ToServer),
    FL = filelib:fold_files(Directory, ".*", true, fun(F, L) -> [F|L] end, []),
-   [ load_data(F, Client, list_to_binary(Bucket), list_to_binary(ContentType)) || F <- FL ].
+   [ load_data(F, Client, list_to_binary(Bucket), ContentType) || F <- FL ].
 
 load_data(FName, Client, Bucket, ContentType) ->
   case file:read_file(FName) of
