@@ -24,7 +24,7 @@ inspect_objects(Bucket, [H|T], Client) ->
     inspect_objects(Bucket, T, Client).
 ```
 
-*NOTE*: If interested in reading all chunks from Luwak, please check out this snippet: https://gist.github.com/1405493#file_luwak_file_iterate.erl
+*NOTE*: If interested in reading all chunks from Luwak, please check out [[this|https://gist.github.com/1405493#file_luwak_file_iterate.erl]] snippet.`
 
 h3. Tips and tricks for using this functions
 
