@@ -1,0 +1,19 @@
+h1. Uppercase Text Pre-Commit Hook (Erlang)
+
+[[Source File on GitHub|https://github.com/basho/riak_function_contrib/blob/master/hooks/pre-commit/erlang/uppercase_text.erl]] 
+
+This function can be used in a pre-commit hook to force all letters to UPPERCASE in a text document.
+
+```erlang
+-module(uppercase_text).
+
+-export([uppertext/1]).
+
+uppertext(IncomingObject) ->
+  BinaryContent = riak_object:get_value(IncomingObject),
+  StringContent = binary:bin_to_list(BinaryContent),
+  UpperStringContent = string:to_upper(StringContent),
+  UpperBinaryContent = binary:list_to_bin(UpperStringContent),
+  riak_object:apply_updates(riak_object:update_value(IncomingObject, UpperBinaryContent)).
+```
+
