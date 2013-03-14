@@ -24,4 +24,4 @@
 
 %Returns bucket and key pairs from a map phase
 get_keys(Value,_Keydata,_Arg) ->
-  [{riak_object:bucket(Value),riak_object:key(Value)}].
+  [[riak_object:bucket(Value),riak_object:key(Value)]].
