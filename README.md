@@ -19,9 +19,9 @@ If, at any point, you have a question or issue, please post to the [Riak Mailing
 Have a function to share with the rest of the Riak Community? Great. Here is how you do it:
 
 1. Fork this repo to your own GitHub account (You can read up on forking [here](http://help.github.com/forking/) if you need a refresher)
-2. Add your function source file to the appropriate directory (explained in depth below)
-3. Send a pull request against the `master` branch
-4. Create a docs branch, and add your overview file to the appropriate directory (again, explained below)
+2. Branch from `master` and add your function source file to the appropriate directory (explained in depth below)
+3. Send a pull request against the `master` branch from your branch
+4. Create your docs branch based on the `wiki` upstream branch, and add your overview file to the appropriate directory (again, explained below)
 5. Send a pull request against the `wiki` branch for your docs contribution
 6. Kick back, smile, and relish in the fact that your functions are helping Riak users everywhere
 
