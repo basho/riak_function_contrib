@@ -11,12 +11,12 @@ For more information on using these functions in your environment please referen
 ## Contributed Functions
 
 * [[Counting Keys in a Bucket (JS)|Count-Keys]]
-* [[Return Bucket/Key Pairs (Erlang/JS)|Get-Keys]]
 * [[Delete Key Reduce Phase (Erlang)|Delete-Keys]]
-* [[Regex Key Match (JS)|Regex-Key-Match]]
-* [[Save the Result of a Map to a Riak Bucket/Key (Erlang)|Save-Reduce]]
-* [[Sorting by Field (JS)|Sorting-By-Field]]
 * [[ISO8601 DateTimes (JS)|ISO8601]]
-* [[Stats (JS)|Stats]]
 * [[Luwak Files (Erlang)|Luwak_MR]]
+* [[Regex Key Match (JS)|Regex-Key-Match]]
+* [[Return Bucket/Key Pairs (Erlang/JS)|Get-Keys]]
+* [[Save the Result of a Map to a Riak Bucket/Key (Erlang)|Save-Reduce]]
 * [[Slenderize (JS)|Slenderize]]
+* [[Sorting by Field (JS)|Sorting-By-Field]]
+* [[Stats (JS)|Stats]]
