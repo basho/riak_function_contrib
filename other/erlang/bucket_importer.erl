@@ -1,6 +1,5 @@
 %% -------------------------------------------------------------------
 %%
-%%
 %% This file is provided to you under the Apache License,
 %% Version 2.0 (the "License"); you may not use this file
 %% except in compliance with the License.  You may obtain
@@ -22,19 +21,34 @@
 -export([import_data/4]).
 
 
-
+import_data(ToServer, Bucket, Directory, ContentType) when is_list(Bucket) ->
+    import_data(ToServer, list_to_binary(Bucket), Directory, ContentType);
 import_data(ToServer, Bucket, Directory, ContentType) ->
-   {ok, Client} = riak:client_connect(ToServer),
-   FL = filelib:fold_files(Directory, ".*", true, fun(F, L) -> [F|L] end, []),
-   [ load_data(F, Client, list_to_binary(Bucket), ContentType) || F <- FL ].
+    {ok, Client} = riak:client_connect(ToServer),
+    {ok, StripExtensionRe} = re:compile("\\.[a-z0-9]+$", [caseless]),
+    DirectoryLen = length(Directory),
 
-load_data(FName, Client, Bucket, ContentType) ->
-  case file:read_file(FName) of
-         {ok, Data} ->
-             Key = list_to_binary(filename:basename(FName, filename:extension(FName))),
-             Object = riak_object:new(Bucket, Key, Data, ContentType),
-             Client:put(Object, 1),
-             io:format(".");
-         {error, Reason} ->
-             io:format("Error reading ~p:~p~n", [FName, Reason])
-     end.
+    F = fun(Filename_, Acc0_) ->
+	    case file:read_file(Filename_) of
+		{ok, Data} ->
+		    FilenameRel = lists:nthtail(DirectoryLen, Filename_),
+		    KeyBase = unmunge_directory(FilenameRel),
+		    Key = re:replace(KeyBase, StripExtensionRe, "", [{return,binary}]),
+		    Object = riak_object:new(Bucket, Key, Data, ContentType),
+		    Client:put(Object, 1),
+		    io:format(".");
+
+		{error, Reason} ->
+		    io:format("Error reading ~p:~p~n", [Filename_, Reason])
+	    end,
+	    Acc0_
+    end,
+    [] = filelib:fold_files(Directory, ".*", true, F, []),
+    ok.
+
+
+unmunge_directory([$/ | Rest]) ->
+    unmunge_directory(Rest);
+unmunge_directory([C1,$/,C2,$/,C3,$/ | [C1,C2,C3 | _] = Rest]) ->
+    Rest.
+
