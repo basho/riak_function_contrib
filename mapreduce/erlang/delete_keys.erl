@@ -47,4 +47,4 @@ delete(List, _None) ->
     end
   end,
   
-  [lists:foldl(F, 0, List)]
+  [lists:foldl(F, 0, List)].
