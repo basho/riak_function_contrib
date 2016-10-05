@@ -1,0 +1,38 @@
+# Forcing Read Repair on a Bucket 
+
+[Source File on GitHub](https://github.com/basho/riak_function_contrib/blob/master/other/erlang/bucket_importer.erl)
+
+This Erlang function will read every key in a bucket and force read-repair on that bucket.
+
+The function takes the 2 arguments:
+
+```erlang
+bucket_inspector:inspect(bucket, node)
+```
+
+```erlang
+-module(bucket_inspector).
+
+-export([inspect/2]).
+
+inspect(Bucket, Server) ->
+    {ok, C} = riak:client_connect(Server),
+    {ok, Keys} = C:list_keys(Bucket),
+    inspect_objects(Bucket, Keys, C).
+
+inspect_objects(_Bucket, [], _Client) ->
+    ok;
+inspect_objects(Bucket, [H|T], Client) ->
+    Client:get(Bucket, H),
+    inspect_objects(Bucket, T, Client).
+```
+
+*NOTE*: If interested in reading all chunks from Luwak, please check out [this](https://gist.github.com/1405493#file_luwak_file_iterate.erl) snippet.
+
+## Tips and tricks for using this functions
+
+To inspect a bucket run as follows (Bucket should be a binary and Riak node an Atom):
+
+```erlang
+bucket_inspector:inspect(<<"bucket">>, 'riak@127.0.0.1').
+```
